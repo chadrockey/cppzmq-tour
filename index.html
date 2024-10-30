@@ -837,6 +837,13 @@ Details of the applicability and meaning of these flags are found in <a href="ht
 </div>
 </div>
 
+<div class="note">
+<p>
+One comment to give my preference.  In most cases we will use <code>none</code>.  The API would be friendlier to us if <code>none</code> was set as a default.  However, that simpler call signature was already taken by other (now deprecated) versions of <code>send()</code>.  Maybe in a future release, at the cost of a breaking change, this friendliness can be added!
+</p>
+
+</div>
+
 <div id="outline-container-org701f951" class="outline-4">
 <h4 id="org701f951">Send results</h4>
 <div class="outline-text-4" id="text-org701f951">
@@ -852,12 +859,6 @@ Regardless of the send flag used we <b>must</b> save the send result in a variab
 Regardless of what send flag we use, any other error that occurs will lead to a throw of the <code>zmq::error_t</code> exception so we do not require any special compiler flags to be sure all other errors can not go silently unchecked.
 </p>
 
-<div class="note">
-<p>
-One comment to give my preference.  In most cases we will use <code>none</code>.  The API would be friendlier to us if <code>none</code> was set as a default.  However, that simpler call signature was already taken by other (now deprecated) versions of <code>send()</code>.  Maybe in a future release, at the cost of a breaking change, this friendliness can be added!
-</p>
-
-</div>
 </div>
 </div>
 
